@@ -305,7 +305,75 @@ ANTHROPIC_API_KEY=sk-ant-api03-...본인키...
 
 ---
 
-### Turn 8: 산출물 저장 + 다음 단계
+### Turn 8: GitHub 저장소 생성 + 코드 백업
+
+> "지금까지 작성한 코드는 본인 PC에만 있어요. 노트북이 망가지면 다 날아가요. GitHub에 백업해 둡시다."
+
+단계별 안내:
+
+```
+1. github.com 접속 → 로그인 (또는 처음이면 가입)
+2. 우상단 "+" → "New repository"
+3. 저장소 이름 입력 (예: my-cafe-app)
+   → "Private" 선택 (개인 프로젝트는 비공개)
+   → "Create repository"
+4. 화면에 뜨는 명령어를 터미널에 붙여넣기:
+   git remote add origin https://github.com/[본인id]/my-cafe-app.git
+   git branch -M main
+   git push -u origin main
+5. 처음이면 GitHub 로그인 창이 뜸
+   → Personal Access Token 발급해서 비밀번호 대신 입력
+   (GitHub Settings → Developer settings → Personal access tokens)
+6. Push 완료 후 GitHub 저장소 페이지 새로고침
+   → 본인 코드가 보이면 성공!
+```
+
+> "push 후 GitHub에서 반드시 확인:"
+
+```
+✅ .env 파일이 보이지 않아야 정상 (보이면 즉시 키 폐기 + 재발급!)
+✅ config/master.key도 보이지 않아야 정상
+✅ .env.example은 보여도 OK (실제 값 없는 템플릿)
+```
+
+> "앞으로 commit 후 git push 한 줄이면 GitHub에 자동 동기화돼요."
+
+→ Turn 9.
+
+---
+
+### Turn 9: Ch.4 Reflection (회고)
+
+> "Ch.4 레슨을 전부 마쳤습니다. 잠깐 되돌아볼까요? 5가지 질문에 한 줄씩 대답해 주세요."
+
+```
+1. 처음 시작 전에 가장 무서웠던 것은? 지금은 어떤가요?
+2. 가장 의외였던 한 가지는?
+3. 핵심 기능이 실제로 동작하는 걸 봤을 때 어떤 감정이 들었나요?
+4. 아직 막힌 부분이 있다면 1가지는?
+5. Ch.5 LAUNCH로 가기 전에 딱 한 가지 더 손봐야 한다면?
+```
+
+학생이 답하면:
+
+> "잘 오셨어요. Ch.4가 끝난 지금 본인 PC에는:"
+
+```
+✅ 회원가입·로그인 동작
+✅ 핵심 기능 동작
+✅ 디자인 적용
+✅ 랜딩 페이지 + (선택) 결제
+✅ LLM 키 등록 + AI 기능 붙일 준비 완료
+✅ GitHub에 본인 코드 백업
+```
+
+> "Ch.5는 이걸 인터넷에 올려서 본인 가족·친구·동료가 진짜 URL로 접속할 수 있게 하는 단계예요."
+
+→ Turn 10 (산출물 저장).
+
+---
+
+### Turn 10: 산출물 저장 + 다음 단계
 
 본인이 학생의 답변을 모아 `learn-outputs/ch4-13-env.md` 파일을 **실제로 생성**한다. 형식:
 

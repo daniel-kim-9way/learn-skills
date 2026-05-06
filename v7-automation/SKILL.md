@@ -1,54 +1,26 @@
 ---
 name: v7-automation
-description: "업무 자동화 도전. C7 기능 추가 개발. Triggers: \"v7 automation\", \"v7-automation\", \"업무 자동화\", \"자동화\""
+description: "자동화 실습 스킬. n8n / Zapier / 자체 webhook 3가지 옵션을 비교하고, 본인 SaaS에 가입→Slack 알림+Notion 행 추가+환영 메일 흐름을 실제로 연결한다. Triggers: \"v7-automation\", \"자동화\", \"Slack 연결\", \"Notion 연결\", \"webhook\", \"Zapier\", \"n8n\""
 ---
 
-# V7: 업무 자동화 도전
+# V7: 자동화 실습 — Slack/Notion/메일 연결
 
-## 학습 목표
-- 일상에서 반복되는 작업을 자동화 대상으로 식별할 수 있다
-- Claude와 함께 자동화 로직을 설계할 수 있다
-- Rails의 Solid Queue로 반복 작업을 스케줄링할 수 있다
-- 하나의 자동화를 처음부터 끝까지 완성할 수 있다
+## 목표
+- n8n / Zapier / 자체 webhook 3가지 옵션의 차이와 본인 상황에 맞는 선택을 안다
+- 본인 SaaS에 자동화 흐름 1개를 실제로 연결한다 (예: 가입 → Slack 알림 + Notion 행 추가 + 환영 메일)
+- 트리거·액션·webhook 개념을 실제 연결로 익힌다
 
 ## 사전 조건
-- C4 LAUNCH 완료 (배포된 Rails 서비스)
-- 코드 에디터 + Claude Code 확장 프로그램 설치
-- 기본적인 Rails 구조 이해 (모델, 컨트롤러)
+- 배포 완료 (인터넷 URL 있음, Ch.5)
+- Claude Code 터미널에서 실행
 
-## 예상 소요 시간
-35분
+## 진행 방식
 
-## STOP PROTOCOL
+1. `references/main.md`를 읽고 도구 선택부터 시작한다
+2. Q&A로 트리거(무엇이 일어나면)와 액션(무엇을 실행할지)을 정한다
+3. 선택한 도구(Zapier 권장 첫 시도)로 단계별 연결을 안내한다
+4. 실제 가입 테스트로 자동화가 동작하는지 확인한다
 
-이 스킬은 2-Phase STOP Protocol을 따릅니다.
-
-### Phase A (Turn 1)
-1. references/main.md의 EXPLAIN 섹션을 읽고 설명한다
-   - 자동화란 "반복 작업을 코드에게 맡기는 것"
-   - 어떤 업무가 자동화에 적합한가
-   - Rake Task + Solid Queue 패턴
-2. references/main.md의 EXECUTE 섹션을 따라 실행한다
-   - 자동화 대상 업무 선정
-   - Rake Task 또는 Job으로 구현
-   - Solid Queue로 스케줄링
-   - 테스트 실행
-3. **STOP** -- 여기서 멈추고 학생의 응답을 기다린다. AskUserQuestion을 사용하지 않는다.
-4. 멈추기 전 출력: "자동화 기능을 완성했습니다. '다음'을 입력하면 퀴즈로 넘어갑니다."
-
-### Phase B (Turn 2)
-1. references/main.md의 QUIZ 섹션 퀴즈 출제
-2. 학생 답변에 피드백한다 (오답 해설 포함)
-3. 다음 안내:
-   - "웹에서 '완료' 버튼을 눌러주세요."
-   - "다음 스킬: `/v7-chrome-ext`"
-
-### 에러 대응 원칙
-- Job 실행 오류 시 Rails 로그 확인
-- 스케줄링 설정 오류 시 config/recurring.yml 확인
-- 외부 API 연동 시 에러 핸들링 필수
-
-### 산출물
-- 1개의 자동화된 작업 (Job 또는 Rake Task)
-- Solid Queue 스케줄링 설정
-- git commit
+## 산출물
+- 파일명: `my-automation.md`
+- 내용: 선택한 도구 + 연결한 흐름(트리거 → 액션 목록) + 테스트 결과 + 비용 메모
