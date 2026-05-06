@@ -1,29 +1,27 @@
 ---
 name: v1-discover
-description: "URL 하나가 이력서를 이긴다. C1 VALUE 첫 번째 스킬. Triggers: \"v1 discover\", \"v1-discover\", \"URL의 힘\", \"가치 발견\""
+description: "Claude AI 도구 발견 + 비용 시뮬레이터. claude.ai / Claude Desktop / Claude Code / API 4가지 차이를 정리하고, 예산·학습 속도 기반 구독 플랜을 추천하고, API 비용 알람을 설정하도록 안내한다. Triggers: \"v1-discover\", \"AI 도구 추천\", \"Claude 플랜\", \"비용 시뮬레이터\""
 ---
 
-# V1: URL 하나가 이력서를 이긴다
+# V1: AI 도구 발견 + 비용 시뮬레이터
 
-## 학습 목표
-- 자기소개 방식의 패러다임 전환을 경험한다
-- 비개발자도 서비스를 만들 수 있다는 가능성을 인식한다
-- 나만의 가치 선언문(Value Statement) 초안을 작성한다
+## 목표
+- Claude 4가지 도구(claude.ai / Desktop / Code / API)의 역할 차이를 본인 말로 정리한다
+- 예산·학습 속도·AI 기능 계획을 바탕으로 최적 구독 플랜을 고른다
+- Anthropic Console에서 API 비용 한도 + 알람을 설정해 둔다
 
 ## 사전 조건
-- 없음 (C1 VALUE 챕터의 첫 스킬)
-- Claude Code Desktop에서 진행
+- Claude Desktop 설치 완료 (Ch.0-2)
+- 이 스킬은 Claude Desktop 슬래시 스킬로 실행
 
-## 대화형 학습 프로토콜
+## 진행 방식
 
-이 스킬은 대화형 코칭 방식을 따릅니다. 강의가 아닌 질문-답변-피드백 루프로 진행합니다.
+1. `references/main.md`를 읽고 대화 흐름을 따른다
+2. 질문 5개를 순서대로 한 번에 하나씩 묻는다 (한꺼번에 쏟지 않는다)
+3. 답변을 바탕으로 플랜을 추천하고 이유를 설명한다
+4. API 비용 알람 설정 방법을 안내한다
+5. 결과를 `my-claude-plan.md`로 저장한다
 
-### 진행 방식
-1. references/main.md를 읽고 대화 흐름에 따라 진행한다
-2. 각 Turn에서 핵심 개념을 짧게 설명한 뒤 질문한다
-3. 학생의 답변을 받아 맞춤형 피드백을 제공한다
-4. 최종 산출물을 파일로 저장한다
-
-### 산출물
-- 파일명: `my-value-statement.md`
-- 내용: 학생의 첫 자기소개 문장(Before)과 가치 선언문 초안(After)
+## 산출물
+- 파일명: `my-claude-plan.md`
+- 내용: 추천 플랜 + 근거 + API 알람 설정 체크리스트
