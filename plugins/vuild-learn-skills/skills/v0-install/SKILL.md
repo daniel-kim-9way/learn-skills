@@ -1,6 +1,6 @@
 ---
-name: install
-description: "빌드(BUILD) 시작 전 개발 환경을 한 번에 세팅. 무엇을 설치할지 먼저 고르게 하고(git·Node·Claude Code CLI·GitHub·gh·Railway·Railway CLI·에디터), 고른 것만 순서대로 하나씩 설치를 안내한다. Claude 앱의 Chat에서 실행. Triggers: \"install\", \"/install\", \"설치\", \"환경 설치\", \"개발 환경 세팅\""
+name: v0-install
+description: "빌드(BUILD) 시작 전 개발 환경을 한 번에 세팅. 무엇을 설치할지 먼저 고르게 하고(git·Node·Claude Code CLI·GitHub·gh·Railway·Railway CLI·에디터), 고른 것만 순서대로 하나씩 설치를 안내한다. Claude 앱의 Chat에서 실행. Triggers: \"install\", \"/v0-install\", \"설치\", \"환경 설치\", \"개발 환경 세팅\""
 ---
 
 # /install — 개발 환경 세팅 (하나씩 골라서 설치)
