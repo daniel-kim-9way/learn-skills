@@ -8,8 +8,8 @@
     {
       "name": "vuild-learn-skills",
       "source": "./plugins/vuild-learn-skills",
-      "description": "Vuild LEARN 커리큘럼 스킬 28개 (C1 VALUE ~ C8 비즈니스 확장). vuild.kr/learn 강의 흐름을 Claude 안에서 단계별로 안내합니다.",
-      "version": "2.0.0",
+      "description": "Vuild LEARN 커리큘럼 스킬 29개 (개발환경 install + C1 VALUE ~ C8 비즈니스 확장). vuild.kr/learn 강의 흐름을 Claude 안에서 단계별로 안내합니다.",
+      "version": "2.1.0",
       "author": {
         "name": "Vuild"
       }
